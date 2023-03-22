@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Validation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <form>
+        <fieldset class="flexColumn">
+            <legend>Form Validation</legend>
+
+            <div class="flexColumn">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+
+                <label for="cell">Phone Number</label>
+                <input type="tel" name="cell" id="cell" required pattern="[0-9]{10,10}">
+    
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" required pattern="\D+">
+    
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" required pattern="\D+">
+            </div>
+
+            <div class="flexColumn">
+                Select Your Payment Method:
+                <div>
+                    <input type="radio" name="paymentMethod" id="visa" required>
+                    <label for="visa"><image src="https://1000logos.net/wp-content/uploads/2017/06/VISA-Logo-2006.png" width="96px" height="54px"></image></label>
+                    <input type="radio" name="paymentMethod" id="payPal" required>
+                    <label for="payPal"><image src="https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png" width="96px" height="54px"></image></label>
+                    <input type="radio" name="paymentMethod" id="masterCard" required>
+                    <label for="masterCard"><image src="https://1000logos.net/wp-content/uploads/2017/03/MasterCard-Logo-1990.png" width="96px" height="54px"></image></label>
+
+                </div>
+            </div>
+
+            <div>
+                <label for="cardNumber">Card Number:</label>
+                <input type="number" name="cardNumber" id="cardNumber" required pattern="[0-9]{16,16}">
+            </div>
+
+
+            <button>Submit</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>
