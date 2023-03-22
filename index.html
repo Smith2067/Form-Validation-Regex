@@ -26,6 +26,8 @@
                 <input type="text" name="lastName" id="lastName" required pattern="\D+">
             </div>
 
+            <br><br>
+
             <div class="flexColumn">
                 Select Your Payment Method:
                 <div>
@@ -41,7 +43,18 @@
 
             <div>
                 <label for="cardNumber">Card Number:</label>
-                <input type="number" name="cardNumber" id="cardNumber" required pattern="[0-9]{16,16}">
+                <input type="text" name="cardNumber" id="cardNumber" required pattern="[0-9]{16,16}" placeholder="xxxxxxxxxxxxxxxx">
+            </div>
+            <br><br>
+            <div class="flexColumn">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" pattern="\D+" required>
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" pattern="\D+" required>
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip" placeholder="12345" pattern="^\d{5}$" required>
             </div>
 
 
